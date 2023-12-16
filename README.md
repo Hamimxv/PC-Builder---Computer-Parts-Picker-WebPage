@@ -24,6 +24,15 @@ PC Builder is a web application that allows users to select and customize their 
 
 Follow these instructions to get a copy of the project up and running on your local machine.
 
+## Usage
+
+1. Browse through the categories and choose your preferred components.
+2. Click the "Choose" button for each component to add it to your selection.
+3. View real-time updates on the total cost and number of selected items.
+4. Use the "Add to Cart" button to add your selection to the shopping cart.
+5. Capture screenshots of your configured build using the "Screenshot" feature.
+
+
 ### Prerequisites
 
 - Ensure you have [PHP](https://www.php.net/) installed on your machine.
@@ -35,3 +44,21 @@ Follow these instructions to get a copy of the project up and running on your lo
 
    ```bash
    git clone https://github.com/your-username/pc-builder.git
+
+## Technologies Used
+
+- **Frontend:**
+  - HTML, CSS, JavaScript
+  - Bootstrap 4.5.2
+  - Bootstrap Icons 1.11.2
+
+- **Backend:**
+  - PHP
+
+## Contributing
+
+I welcome contributions from the community. If you find any issues or have suggestions for improvement, feel free to open an [issue](#) or submit a [pull request](#).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
