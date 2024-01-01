@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder - Build Your Own Computer - Quantum Technology Bangladesh</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #ebecff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            color: #2E3192;
+            font-weight: bold;
+        }
+
+        h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: white;
+            font-size: 18px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.0rem;
+            color: #2E3192;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        label {
+            color: #2E3192;
+            width: 100%;
+            margin-right: 10px;
+            margin-left: 50px;
+        }
+
+        .glow-on-hover {
+            width: 220px;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #2E3192;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:active {
+            color: #000
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #2E3192;
+            left: 0;
+            top: 0;
+            border-radius: 5px;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .builder-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-image: linear-gradient(to right, #000000 , #3533CD);
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-body {
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+
+        .pcb-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .quantumtechbd-logo img {
+            max-width: 100%;
+            height: auto;
+            margin-left: 5PX;
+        }
+
+        .actions {
+            display: flex;
+            position: relative;
+        }
+
+        .all-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .action {
+            text-decoration: none;
+            color: #2E3192;
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .action i {
+            margin-bottom: 5px;
+            font-size: 2.5rem;
+        }
+
+        .m-hide {
+            display: none;
+        }
+
+        .action .bi {
+            font-size: 2rem;
+        }
+
+
+        .total-section {
+            display: inline-flex;
+            margin-right: 20px;
+            margin-top: 15px;
+            color: #2E3192;
+            font-weight: bold;
+            position: relative;
+        }
+
+        #total-amount {
+            margin-right: 15px;
+            color: white;
+        }
+
+        #total-items {
+            margin-right: 15px;
+            color: white;
+        }
+
+        #add-to-cart,
+        #screenshot {
+            display: inline-flex;
+            margin-right: 5px;
+        }
+
+        .item-icon {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: #2E3192;
+        }
+
+        .t-rectangle {
+            width: 140px;
+            height: 45px;
+            background: #2E3192;
+            border-radius: 5px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 5px;
+            left: -20px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+        /* Styles for screens smaller than 768px (e.g., tablets and smartphones) */
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        .builder-card {
+            margin: 0;
+        }
+
+        .item-icon {
+            font-size: 24px;
+        }
+    }
+
+        @media (max-width: 576px) {
+        /* Styles for screens smaller than 576px (e.g., smartphones) */
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .builder-card {
+            margin: 0;
+        }
+
+        .item-icon {
+            font-size: 20px;
+        }
+    }
+
+   /*  navbar */
+
+
+   .pc-build {
+    color: white;
+    width: 150px;
+    height: 40px;
+    border: orangered;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, orangered, rgb(212, 150, 14));
+    font-weight: bold;
+}
+
+.pc-build:hover {
+    color: #3533CD;
+    font-weight: bold;
+}
+
+
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out;}
+
+.navcontrol {
+    height: 100%;
+    width: 150%;
+    padding: 10px;
+    background-image: linear-gradient( to right, rgb(20, 20, 19), #3533CD);
+    border-radius: 5px;
+}
+
+#nav {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#nav:hover {
+    color: orange;
+}
+
+
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.d-flex {
+    display: flex!important;
+    align-items: center;  
+}
+
+input[type=search] {
+
+background-color: #ebecff;
+} 
+
+input[type=search]:focus {
+
+    background-color: #ebecff;
+}
+
+#Account {
+    font-size: large;
+}
+
+#Account:hover {
+    color: blue;
+}
+
+#Create {
+    text-decoration: none;
+    color: black;
+}
+
+#Create:hover {
+    color: blue;
+}
+
+#ACinfo:hover {
+    color: blue;
+}
+
+.form-control {
+    background-color: #a8b6cc;
+}
+
+#cont {
+    margin-top: 20px;
+}
+
+#leftcont {
+    border-radius: 5px;
+}
+
+#collapse1 {
+    margin-top: 150px;
+}
+
+#boxs {
+    margin-left: 102px;
+}
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+.fill {
+    margin-top: 130px;
+    margin-left: 20px;
+}
+
+#forms {
+    margin-bottom: 15px;
+}
+
+#col2nd {
+    background-image: url(images/icon/Group\ 4\ Web\ Design\ .png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% auto;
+}
+
+.form-wrapper {
+    width: 355px;
+    padding: 10px;
+    background: #444;
+    background: rgba(0, 0, 0, .2);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 50px;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+.form-wrapper input {
+    width: 230px;
+    height: 35px;
+    padding: 10px 5px;
+    float: left;
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 50px;
+}
+
+.form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+}
+
+.form-wrapper input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 35px;
+    width: 65px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    background: blueviolet;
+    border-radius: 10px;
+}
+
+#ViewBtn {
+    margin-top: 20px;
+    margin-left: 20%;
+    width: 200px;
+    height: 40px;
+    border: orangered;
+    border-radius: 10px;
+    text-align: center;
+    font: bold;
+    color: #eee;
+    background-image: linear-gradient(to right, orangered, rgb(212, 150, 14));
+}
+
+#ViewBtn:hover {
+    color: black;
+    transform: perspective();
+}
+
+.btn-primary {
+    color: #000;
+    background-color: #a8b6cc;
+    border-color: #dadee6;
+}
+
+.third {
+    height: 250px;
+    width: 300px;
+    width: 433px;
+    margin-top: 50px;
+    margin-left: -12px;
+}
+
+.fourth button {
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: px;
+}
+
+.fourth button {
+    margin-top: 50px;
+    border: 2px solid wheat;
+    background-color: wheat;
+}
+
+.fourth button:hover {
+    background-color: rgb(14, 234, 113);
+    ;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+a:hover {
+    color: tomato;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+    </style>
+</head>
+
+<body>
+
+
+        <!--First Part-->
+    <!--Navvar One-->
+    <div class=" container ">
+        <nav class=" d-flex justify-content-betweennavbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid ">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <img src="https://i.ibb.co/drYjMrs/logo.png" alt="">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search  For Products " aria-label="Search  For Products ">
+                            <button class="btn btn-outline-success" type="submit">Search </button>
+                        </form>
+                        <div>
+
+                        </div id=" icons">
+                        <i class='fas fa-user-alt' style='font-size:36px; margin-left: 20px; color: blue;'></i>
+                        <p style='font-weight: 600;margin-left: 10px;'> <b id="Account">Account</b> <br>
+                            <a id="Create" href="login.php">Login </a>Or <a id="Create" href="registration.php"> Register</a> </p>
+                        <i class='fas fa-cart-plus' style='font-size:40px ; margin-left: 10px; color: blue;'></i>
+                        <p style="margin-left: 10px;" id="ACinfo"> <b>Total: 0 $</b> <br>0 item(s) </p>
+                        <button class="pc-build" style='font-size:24px; margin-left: 25px;'>PC Build <i class='fas fa-cart-arrow-down'></i></button>
+                    </div>
+
+            </div>
+            </nav>
+    </div>
+    </nav>
+    </div>
+
+    <!--Navbar Two-->
+    <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar Brand -->
+        
+
+        <!-- Navbar Toggler for small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navcontrol d-flex justify-content-between">
+                <a class="nav-item nav-link" href="#">Laptop</a>
+                <a class="nav-item nav-link" href="#">Desktop</a>
+                <a class="nav-item nav-link" href="#">Component</a>
+                <a class="nav-item nav-link" href="#">Monitor</a>
+                <a class="nav-item nav-link" href="#">Phone</a>
+                <a class="nav-item nav-link" href="#">Tablet</a>
+                <a class="nav-item nav-link" href="#">Office Equipment</a>
+                <a class="nav-item nav-link" href="#">Camera</a>
+                <a class="nav-item nav-link" href="#">Security</a>
+                <a class="nav-item nav-link" href="#">Networking</a>
+                <a class="nav-item nav-link" href="#">Gadget</a>
+                <a class="nav-item nav-link" href="#">Gaming</a>
+                <a class="nav-item nav-link" href="#">Software</a>
+                <a class="nav-item nav-link" href="#">TV</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div class="container">
+        <h1 class="mt-5">PC Builder</h1>
+        <h3>Select Your Components</h3>
+
+        <div class="pcb-head">
+            <div class="quantumtechbd-logo">
+                <img class="logo" src="https://i.ibb.co/drYjMrs/logo.png" width="160" height="160" alt="Logo">
+            </div>
+
+            <div class="actions">
+                <div class="all-actions">
+                    <form>
+                        <div class="t-rectangle">
+                            <div class="shine"></div>
+                        </div>
+
+                        <div class="total-section">
+                            <p id="total-amount">0.0৳</p>
+                            <p id="total-items">0 Items</p>
+                        </div>
+
+                        <div id="add-to-cart" class="action">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#2e3192" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20V180h44c11 0 20-9 20-20s-9-20-20-20H356V96c0-11-9-20-20-20s-20 9-20 20v44H272c-11 0-20 9-20 20z"/></svg>                            
+                            <span>Add to Cart</span>
+                        </div>
+
+                        <div id="screenshot" class="action">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#2e3192" d="M220.6 121.2L271.1 96 448 96v96H333.2c-21.9-15.1-48.5-24-77.2-24s-55.2 8.9-77.2 24H64V128H192c9.9 0 19.7-2.3 28.6-6.8zM0 128V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H271.1c-9.9 0-19.7 2.3-28.6 6.8L192 64H160V48c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16l0 16C28.7 64 0 92.7 0 128zM168 304a88 88 0 1 1 176 0 88 88 0 1 1 -176 0z"/></svg>
+                            <span>Screenshot</span>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form action="#" method="post">       
+                <div class="builder-card">
+                    <div class="card-header">
+                        <h2>CORE COMPONENTS</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-microchip item-icon"></i><label>Processor</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-chess-board item-icon"></i><label>Motherboard</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-video item-icon"></i><label>Graphics Card</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-temperature-low item-icon"></i><label>CPU Cooler</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-memory item-icon"></i><label>RAM</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-hdd item-icon"></i><label>SSD</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-hdd item-icon"></i><label>HDD</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-plug item-icon"></i><label>Power Supply</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-desktop item-icon"></i><label>Casing</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="builder-card">
+                    <div class="card-header">
+                        <h2>PERIPHERALS & OTHERS</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-desktop item-icon"></i><label>Monitor</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-fan item-icon"></i><label>Case Fan</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-battery-full item-icon"></i><label>UPS</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-shield-alt item-icon"></i><label>Anti Virus</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="builder-card">
+                    <div class="card-header">
+                        <h2>ACCESSORIES</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-mouse item-icon"></i><label>Mouse</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-keyboard item-icon"></i><label>Keyboard</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                            <li><i class="fas fa-headphones item-icon"></i><label>Headphone</label><button type="button" name="Choose" class="btn btn-success glow-on-hover">Choose</button></li>
+                        </ul>
+                    </div>
+            </form>
+        </div>
+        
+
+    <!-- Bootstrap JS and Popper.js (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
