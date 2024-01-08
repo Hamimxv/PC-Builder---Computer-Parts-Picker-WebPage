@@ -302,13 +302,14 @@
     height: 40px;
     border: orangered;
     border-radius: 5px;
+    border: 1px solid orangered;
     background-image: linear-gradient(to right, orangered, rgb(212, 150, 14));
     font-weight: bold;
 }
 
 .pc-build:hover {
-    color: #3533CD;
-    font-weight: bold;
+            color: #3533CD;
+            font-weight: bold;
 }
 
 
@@ -319,6 +320,14 @@
     color: white;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out,border-color .15s ease-in-out;}
+
+    .nav-link:hover {
+            color: orange !important; /* Hover color for navbar links */
+        }
+
+    .navbar-toggler-icon {
+            background-color: white; /* Color for the navbar toggler icon */
+        }
 
 .navcontrol {
     height: 100%;
@@ -334,9 +343,15 @@
     font-size: 16px;
 }
 
+
 #nav:hover {
     color: orange;
 }
+
+.navbar {
+            background-color: transparent !important; /* Dark background color */
+            color: white; /* Light text color */
+        }
 
 
 
@@ -360,6 +375,7 @@ input[type=search]:focus {
 
 #Account {
     font-size: large;
+    color: #000;
 }
 
 #Account:hover {
@@ -373,6 +389,10 @@ input[type=search]:focus {
 
 #Create:hover {
     color: blue;
+}
+
+#ACinfo {
+    color: black;
 }
 
 #ACinfo:hover {
@@ -558,6 +578,38 @@ a:hover {
     text-decoration: none;
 }
 
+.form-control {
+    border-radius: 5px; 
+    border: 2px solid #2E3192; 
+}
+
+.btn-outline-success {
+    border-color: #2E3192; 
+    color: #2E3192; 
+}
+
+.btn-outline-success:hover {
+    background-color: #2E3192; 
+    color: white; 
+}
+
+.btn-outline-success {
+    margin-left: -1px;
+}
+
+.form-control {
+    padding: 8px;
+}
+
+.form-control::placeholder {
+    font-size: 14px;
+}
+
+p{
+    color:black;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
     </style>
@@ -571,7 +623,7 @@ a:hover {
     <div class=" container ">
         <nav class=" d-flex justify-content-betweennavbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid ">
-                <nav class="navbar navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
                         <img src="https://i.ibb.co/drYjMrs/logo.png" alt="">
                         <form class="d-flex">
@@ -582,7 +634,7 @@ a:hover {
 
                         </div id=" icons">
                         <i class='fas fa-user-alt' style='font-size:36px; margin-left: 20px; color: blue;'></i>
-                        <p style='font-weight: 600;margin-left: 10px;'> <b id="Account">Account</b> <br>
+                        <p style='margin-left: 10px;'> <b id="Account">Account</b> <br>
                             <a id="Create" href="login.php">Login </a>Or <a id="Create" href="registration.php"> Register</a> </p>
                         <i class='fas fa-cart-plus' style='font-size:40px ; margin-left: 10px; color: blue;'></i>
                         <p style="margin-left: 10px;" id="ACinfo"> <b>Total: 0 $</b> <br>0 item(s) </p>
