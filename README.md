@@ -13,7 +13,11 @@ PC Builder is a web application that allows users to select and customize their 
 - [Contributing](#contributing)
 - [License](#license)
 - [Live Page](https://hamimxv.github.io/PC-Builder---Computer-Parts-Picker-WebPage/)
-- [Website Live Preview](https://hamimxv.github.io/PC-Builder---Computer-Parts-Picker-WebPage/)
+
+## Live Preview
+
+<iframe src="https://hamimxv.github.io/PC-Builder---Computer-Parts-Picker-WebPage/" width="800" height="600"></iframe>
+
 
 
 ## Features
