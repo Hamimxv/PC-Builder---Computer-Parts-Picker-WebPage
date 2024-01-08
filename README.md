@@ -2,7 +2,7 @@
 
 ![PC Builder Logo](https://i.ibb.co/drYjMrs/logo.png)
 
-PC Builder is a web application that allows users to select and customize their computer components. This project is developed by Quantum Technology Bangladesh.
+PC Builder is a web application that allows users to select and customize their computer components. This project is developed for Quantum Technology Bangladesh.
 
 ## Table of Contents
 
@@ -32,28 +32,27 @@ Follow these instructions to get a copy of the project up and running on your lo
 4. Use the "Add to Cart" button to add your selection to the shopping cart.
 5. Capture screenshots of your configured build using the "Screenshot" feature.
 
-
 ### Prerequisites
 
-- Ensure you have [PHP](https://www.php.net/) installed on your machine.
-- Web server (e.g., [Apache](https://httpd.apache.org/) or [Nginx](https://www.nginx.com/)).
+- Ensure you have ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat&logo=php&logoColor=white) installed on your machine.
+- Web server (e.g., ![Apache](https://img.shields.io/badge/Apache-%23D22128.svg?style=flat&logo=apache&logoColor=white) or ![Nginx](https://img.shields.io/badge/Nginx-%23269539.svg?style=flat&logo=nginx&logoColor=white)).
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/pc-builder.git
+   https://github.com/Hamimxv/PC-Builder---Computer-Parts-Picker-WebPage.git
 
 ## Technologies Used
 
 - **Frontend:**
   - HTML, CSS, JavaScript
-  - Bootstrap 4.5.2
-  - Bootstrap Icons 1.11.2
+  - ![Bootstrap](https://img.shields.io/badge/Bootstrap-4.5.2-563D7C.svg?style=flat&logo=bootstrap&logoColor=white)
+  - ![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-1.11.2-563D7C.svg?style=flat&logo=bootstrap&logoColor=white)
 
 - **Backend:**
-  - PHP
+  - ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat&logo=php&logoColor=white)
 
 ## Contributing
 
